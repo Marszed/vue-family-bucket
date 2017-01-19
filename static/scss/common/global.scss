@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+@import "../base/_base";
+@import "../base/_mixin";
+@import "../base/_animate";
+@import "../components/_footer"; // 底部菜单栏
+@import "../components/_list"; // 选择list
+@import "../components/_btns"; // 按钮
+@import "../components/_search"; // 搜索
+@import "../components/_shade"; // 遮罩弹层
+
+body{
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+#app{
+  height: 100%;
+}
+
+.full-page{
+  height: 100%;
+  position: relative;
+}
+
+ol{
+  list-style-position:inside;
+}
+.bg{
+  height: 100%;
+  background: #fbfbfb url("../../../static/img/common/bg.jpg") center bottom no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.bg-blur{
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.bg-box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 4;
+}
+
+.layer{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 8000;
+}
+
+.layer1{
+  @extend .layer;
+  background: rgba(0,0,0,0.4);
+  justify-content:center;//子元素水平居中
+  align-items:center;//子元素垂直居中
+  display:-webkit-flex;
+  display: flex;
+}
+
+
+.abnormal-img{
+  display: block;
+  margin: 0 auto;
+  padding-top: (300/(1334-40-88))*100#{'%'};
+  width: (300/750)*100#{'%'};
+}
+
+.abnormal-tip{
+  margin-top: toRem(20);
+  text-align: center;
+  font-size: toRem(34);
+  line-height: toRem(34);
+  color: #7C797A;
+}
+
+.abnormal-title{
+  margin-top: toRem(20);
+  font-size: toRem(28);
+  line-height: toRem(28);
+  color: #A8A8A8;
+  text-align: center;
+}
+
+.abnormal-op{
+  margin-top: toRem(50);
+  text-align: center;
+  line-height: toRem(34);
+  a{
+    color: #458FE5;
+    font-size: toRem(34);
+    text-align: center;
+    text-decoration:none !important;
+  }
+}
+
+.weui_toast_text{
+  padding: 0 0.2rem;
+  bottom: 1.8rem;
+  top: auto !important;
+  width: auto !important;
+}
+
+.weui_toast{
+  -webkit-transform: translateX(-50%) !important;
+}
+
+@for $i from 0 to 12 {
+  .weui_loading_leaf_#{$i}{
+    　　-webkit-animation: opacity-60-25-#{$i}-12 1.25s linear infinite;
+  }
+}

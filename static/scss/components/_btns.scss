@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.bg-btn{
+  display: block;
+  width: $btn-width;
+  height: $btn-height;
+  line-height: $btn-height;
+  text-align: center;
+  background: $btn-bg-color;
+  border-radius: toRem(6);
+  font-size: toRem(34);
+  color: $btn-color;
+  margin: toRem(50) toRem(30) 0;
+  &:active{
+    color: hsla(0,0%,100%,.4);
+    background-color: #039702;
+  }
+}
+
+.bg-btn-default{
+  background: #DCDCE0;
+  color: #C1C1C4;
+  &:active{
+    opacity: 0.4;
+    color: #C1C1C4;
+    background-color: #DCDCE0;
+  }
+}

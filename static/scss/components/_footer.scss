@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+//底部悬浮菜单栏
+
+.menu-footer{
+  max-width: 750px;
+  width: 100%;
+  height: toRem(100);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: #F7F7FA;
+  box-shadow: inset 0 1px 0 0 #C0BFC4;
+  webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.menu-footer-list{
+  @include clearfix();
+  & > li {
+    float: left;
+    width: 33.3333333%;
+  }
+  a {
+    display: block;
+    height: toRem(100);
+    line-height: toRem(100);
+    text-align: center;
+    color: #595959;
+    & > p{
+      font-size: toRem(50);
+      line-height: toRem(50);
+      margin: toRem(14) 0 toRem(4);
+    }
+    & > span{
+      display: block;
+      font-size: toRem(20);
+      height: toRem(24);
+      line-height: toRem(24);
+    }
+    .iconfont-2{
+      display: none;
+    }
+  }
+  .router-link-active{
+    color: #389D38;
+    .iconfont-2{
+      display: block;
+    }
+    .iconfont-1{
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 750px){
+   .menu-footer{
+     left: 50%;
+     margin-left: -375px;
+   }
+}

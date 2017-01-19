@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+.banner-header{
+  background-color: #dfdfdf;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: toRem(30);
+  position: relative;
+  .banner-location{
+    display: inline-block;
+    background: rgba(0,0,0,.4);
+    border-radius: 100px;
+    padding: 0 toRem(25);
+    height: toRem(60);
+    line-height: toRem(60);
+    font-size: toRem(32);
+    color: #FFFFFF;
+    margin: 0 auto;
+    text-align: center;
+    &:before{
+      font-family: "iconfont";
+      content: '\e650';
+      display: inline-block;
+      font-size: toRem(32);
+      margin-right: toRem(10);
+    }
+  }
+  .banner-tip{
+    position: absolute;
+    bottom: toRem(20);
+    right: 0;
+    width: toRem(206);
+    padding-right: toRem(30);
+    white-space: nowrap;
+    text-align: right;
+    line-height: toRem(33);
+    height: toRem(33);
+    z-index: 3;
+    font-size: toRem(24);
+    color: #FFFFFF;
+  }
+}
+
+.banner-open{
+  text-align: center;
+  height: toRem(240-30);
+  background-image: url('../../../static/img/common/openDoorBanner.jpg');
+}

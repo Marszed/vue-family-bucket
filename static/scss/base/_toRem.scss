@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+//pxToRem
+@function toRem($px) {
+  //@return $px / 1 * 1px;
+  @return $px / 100 * 1rem;
+}
+
+$btn-bg-color: #389D38 !default;
+$btn-color: #FFFFFF !default;
+$btn-width: (690/750)*100+#{'%'} !default;
+$btn-height: toRem(80) !default;
+$item-active: #ececec !default;
+
+
+
+

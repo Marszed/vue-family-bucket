@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+//pxToRem
+@function toRem($px) {
+  //@return $px / 1 * 1px;
+  @return $px / 100 * 1rem;
+}
+
+//border-radius
+@mixin radius($radius: 5px){
+    border-radius: $radius;
+}
+
+
+//position
+@mixin absolute-center-left($width){
+    position: absolute;
+    left: 50%;
+    width: $width;
+    margin-left: -$width / 2;
+}
+@mixin absolute-center-top($width){
+    position: absolute;
+    top: 50%;
+    width: $width;
+    margin-left: -$width / 2;
+}
+@mixin absolute-center-center($height,$width){
+    @include absolute-top-left(50%,50%);
+    margin-top: -$height / 2;
+    margin-left: -$width / 2;
+    height: $height;
+    width: $width;
+}
+@mixin absolute-top-left($top: 0,$left: 0){
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+@mixin absolute-top-center($width){
+    position: absolute;
+    left: 50%;
+    margin-left: -$width / 2;
+    width: $width;
+}
+@mixin absolute-top-right($top: 0,$right: 0){
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+@mixin absolute-bottom-left($bottom: 0,$left: 0){
+    position: absolute;
+    bottom: $bottom;
+    left: $left;
+}
+@mixin absolute-bottom-right($bottom: 0,$right: 0){
+    position: absolute;
+    bottom: $bottom;
+    right: $right;
+}
+
+//height
+@mixin line-height($height){
+    height: $height;
+    line-height: $height;
+}
+@mixin line-height-border($height){
+    height: $height;
+    line-height: $height - 2;
+}
+
+@mixin text-ellipsis{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    word-break:keep-all;
+    max-width: 100%;
+}
+
+@mixin disable-select {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@mixin clearfix {
+    &:before,&:after{
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.clearfix{
+  @include clearfix();
+}
+
+$btn-bg-color: #389D38 !default;
+$btn-color: #FFFFFF !default;
+$btn-width: (690/750)*100+#{'%'} !default;
+$btn-height: toRem(80) !default;
+$item-active: #ececec !default;
+
+
+
+
