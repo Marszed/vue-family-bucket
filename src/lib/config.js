@@ -33,20 +33,10 @@ Config.detail = {
 
 var hostConfig = {
   pro: {
-    host: 'http://mapi-api.shequbanjing.com',
-    static: 'http://static.m.shequbanjing.com',
-    keyByte: 'Z2lnb2xkODg4QGNz', // gigold888@cs
-    mobileAPI: 'http://wx.shequbanjing.com/api', //老系统地址 http://qa.mobile.api.shequbanjing.com
-    apiWeChat: 'http://wx.shequbanjing.com', // 微信公众号接口地址
-    api: 'http://wx.shequbanjing.com/mapi',// 新系统地址 http://qa.api.shequbanjing.com
-    origin: 'http://wx.shequbanjing.com'
+
   },
   qa: {
-    keyByte: 'Z2lnb2xkODg4QGNz', // gigold888@cs
-    mobileAPI: 'http://qa.wx.shequbanjing.com/api', //老系统地址 http://qa.mobile.api.shequbanjing.com
-    apiWeChat: 'http://qa.wx.shequbanjing.com', // 微信公众号接口地址
-    api: 'http://qa.wx.shequbanjing.com/mapi',// 新系统地址 http://qa.api.shequbanjing.com
-    origin: 'http://qa.wx.shequbanjing.com'
+
   },
   sit: {
     keyByte: 'MTIzNDU2', // 123456
