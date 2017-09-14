@@ -21,3 +21,10 @@
 解决方案： 
   1: 通过iframe去转载载第三方页面
   2: cookie localStorage缓存store中的数据
+
+##### UI展示
+![](https://github.com/Marszed/vue-family-bucket/raw/master/gitImage/WechatIMG1.png)
+![](https://github.com/Marszed/vue-family-bucket/raw/master/gitImage/WechatIMG2.png)
+![](https://github.com/Marszed/vue-family-bucket/raw/master/gitImage/WechatIMG3.png)
+
+开门动画有个小彩蛋，欢迎关注微信公众号`社区半径`，体验各种姿势开门
